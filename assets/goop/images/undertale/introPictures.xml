@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="introPictures.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="0_1 instance 10000" x="0" y="0" width="566" height="319"/>
+	<SubTexture name="0_2 instance 10000" x="0" y="1666" width="565" height="318"/>
+	<SubTexture name="0_3 instance 10000" x="0" y="1333" width="566" height="318"/>
+	<SubTexture name="0_4 instance 10000" x="0" y="1000" width="566" height="318"/>
+	<SubTexture name="0_5 instance 10000" x="0" y="667" width="566" height="318"/>
+	<SubTexture name="0_6 instance 10000" x="0" y="334" width="566" height="318"/>
+</TextureAtlas>

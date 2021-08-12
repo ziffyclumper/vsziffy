@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ziffy1.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ZiffyBopper2 instance 10000" x="0" y="0" width="511" height="705" frameX="-15" frameY="-15" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10001" x="0" y="0" width="511" height="705" frameX="-15" frameY="-15" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10002" x="526" y="0" width="510" height="706" frameX="-17" frameY="-12" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10003" x="526" y="0" width="510" height="706" frameX="-17" frameY="-12" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10004" x="1051" y="0" width="510" height="705" frameX="-3" frameY="-1" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10005" x="1051" y="0" width="510" height="705" frameX="-3" frameY="-1" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10006" x="0" y="720" width="511" height="703" frameX="-1" frameY="0" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10007" x="0" y="720" width="511" height="703" frameX="-1" frameY="0" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10008" x="1051" y="720" width="511" height="703" frameX="0" frameY="0" frameWidth="527" frameHeight="720"/>
+	<SubTexture name="ZiffyBopper2 instance 10009" x="1051" y="720" width="511" height="703" frameX="0" frameY="0" frameWidth="527" frameHeight="720"/>
+</TextureAtlas>

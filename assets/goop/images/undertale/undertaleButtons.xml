@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="undertaleButtons.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="FightIdle instance 10000" x="0" y="144" width="335" height="129"/>
+	<SubTexture name="FightSelect instance 10000" x="350" y="144" width="335" height="129"/>
+	<SubTexture name="MercyIdle instance 10000" x="350" y="0" width="335" height="129"/>
+	<SubTexture name="MercySelect instance 10000" x="0" y="0" width="335" height="129"/>
+</TextureAtlas>
