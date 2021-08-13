@@ -37,7 +37,7 @@ import sys.thread.Thread;
 
 using StringTools;
 
-class TitleStateOG extends MusicBeatState
+class OGTitle extends MusicBeatState
 {
 	static var initialized:Bool = false;
 
