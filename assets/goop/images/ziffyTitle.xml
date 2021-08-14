@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ziffyTitle.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="IdleZiffy instance 10000" x="2340" y="0" width="775" height="807" frameX="0" frameY="-22" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10001" x="2340" y="0" width="775" height="807" frameX="0" frameY="-22" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10002" x="3130" y="0" width="771" height="802" frameX="-2" frameY="-27" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10003" x="3130" y="0" width="771" height="802" frameX="-2" frameY="-27" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10004" x="1560" y="0" width="765" height="818" frameX="-5" frameY="-11" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10005" x="1560" y="0" width="765" height="818" frameX="-5" frameY="-11" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10006" x="780" y="0" width="765" height="826" frameX="-5" frameY="-3" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10007" x="780" y="0" width="765" height="826" frameX="-5" frameY="-3" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10008" x="0" y="0" width="765" height="829" frameX="-5" frameY="0" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10009" x="0" y="0" width="765" height="829" frameX="-5" frameY="0" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10010" x="0" y="0" width="765" height="829" frameX="-5" frameY="0" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10011" x="0" y="0" width="765" height="829" frameX="-5" frameY="0" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10012" x="0" y="0" width="765" height="829" frameX="-5" frameY="0" frameWidth="775" frameHeight="829"/>
+	<SubTexture name="IdleZiffy instance 10013" x="0" y="0" width="765" height="829" frameX="-5" frameY="0" frameWidth="775" frameHeight="829"/>
+</TextureAtlas>

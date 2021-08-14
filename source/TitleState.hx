@@ -299,6 +299,7 @@ class TitleState extends MusicBeatState
 			skipIntro();
 		}
 		else if(pressedEnter && skipped) {
+			FlxTransitionableState.skipNextTransIn = true;
 			MainMenuState.firstStart = true;
 			MainMenuState.finishedFunnyMove = false;
 			FlxG.switchState(new MainMenuState());

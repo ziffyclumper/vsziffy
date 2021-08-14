@@ -117,7 +117,7 @@ class PlayState extends MusicBeatState
 
 	private var vocals:FlxSound;
 
-	public var originalX:Float;
+	public var originalX:Float = 0;
 
 	public static var dad:Character;
 	public static var gf:Character;
@@ -206,7 +206,7 @@ class PlayState extends MusicBeatState
 	var talking:Bool = true;
 	public var songScore:Int = 0;
 	var songScoreDef:Int = 0;
-	var scoreTxt:FlxText;
+	var scoreTxt:FlxText = new FlxText();
 	var replayTxt:FlxText;
 
 	public static var campaignScore:Int = 0;
@@ -1117,6 +1117,8 @@ class PlayState extends MusicBeatState
 
 		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
 
+		scoreTxt.setPosition(FlxG.width / 2 - 235, healthBarBG.y + 50);
+
 		scoreTxt.screenCenter(X);
 
 		originalX = scoreTxt.x;
@@ -1279,6 +1281,7 @@ class PlayState extends MusicBeatState
 	function boom(inthefuck:Bool, dadIsCool:Bool):Void {
 		if(inthefuck) {
 			cameraLocked = true;
+			canPause = false;
 			camHUD.visible = false;
 			FlxG.camera.zoom = 1.5;
 			defaultCamZoom = 1.5;
@@ -1298,6 +1301,7 @@ class PlayState extends MusicBeatState
 		else {
 			cameraLocked = false;
 			camHUD.visible = true;
+			canPause = true;
 			defaultCamZoom = 0.7;
 			FlxG.camera.zoom = 0.7;
 			if(dadIsCool) {
@@ -2848,39 +2852,6 @@ class PlayState extends MusicBeatState
 
 		if (!inCutscene)
 			keyShit();
-
-		if (FlxG.keys.justPressed.ONE) {
-
-			var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
-			blackScreen.updateHitbox();
-			blackScreen.alpha = 0;
-			blackScreen.scrollFactor.set(0, 0);
-			blackScreen.screenCenter();
-			add(blackScreen);
-
-			var heart:FlxSprite = new FlxSprite(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y).loadGraphic(Paths.image('undertale/heart', 'goop'));
-			heart.antialiasing = false;
-			heart.scale.set(1.5, 1.5);
-			heart.updateHitbox();
-			heart.scrollFactor.set(1, 1);
-			add(heart);
-
-			cameraLocked = true;
-			camFollow.setPosition(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
-
-			FlxTween.tween(blackScreen, {alpha: 0.5}, 0.5);
-
-			new FlxTimer().start(2, function(tmr:FlxTimer) {
-				persistentUpdate = false;
-				persistentDraw = false;
-				paused = true;
-	
-				vocals.stop();
-				FlxG.sound.music.stop();
-	
-				openSubState(new UndertaleSubState());		
-			});
-		}
 	}
 
 	function fuckingDead():Void {
@@ -3461,7 +3432,10 @@ class PlayState extends MusicBeatState
 								{
 									if (mashViolations != 0)
 										mashViolations--;
-									scoreTxt.color = FlxColor.WHITE;
+
+									if(scoreTxt != null)
+										scoreTxt.color = FlxColor.WHITE;
+
 									var noteDiff:Float = -(coolNote.strumTime - Conductor.songPosition);
 									anas[coolNote.noteData].hit = true;
 									anas[coolNote.noteData].hitJudge = Ratings.CalculateRating(noteDiff, Math.floor((PlayStateChangeables.safeFrames / 60) * 1000));
@@ -4025,6 +3999,7 @@ class PlayState extends MusicBeatState
 				case 318:
 					boom(true, false);
 				case 320:
+					boom(false, true);
 					boom(false, false);
 			}
 		}

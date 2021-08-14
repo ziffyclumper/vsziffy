@@ -35,6 +35,7 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var newGaming:FlxText;
+	var ziffy:FlxSprite;
 	var newGaming2:FlxText;
 	public static var firstStart:Bool = true;
 
@@ -60,7 +61,7 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xFFf7fdff);
 		add(bg);
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
@@ -75,6 +76,17 @@ class MainMenuState extends MusicBeatState
 		add(magenta);
 		// magenta.scrollFactor.set();
 
+		ziffy = new FlxSprite(538.05, 760);
+		ziffy.frames = Paths.getSparrowAtlas('ziffyTitle', 'goop');
+		ziffy.scrollFactor.set();
+		ziffy.antialiasing = true;
+		ziffy.updateHitbox();
+		ziffy.animation.addByPrefix('bop', 'IdleZiffy instance 1', true);		
+		ziffy.animation.play('bop');
+		add(ziffy);
+
+		FlxTween.tween(ziffy, {y: 26.65}, 0.6, {ease: FlxEase.circOut, startDelay: 0.5});
+
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -88,7 +100,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
+			menuItem.x = 50;
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
@@ -124,6 +136,10 @@ class MainMenuState extends MusicBeatState
 	}
 
 	var selectedSomethin:Bool = false;
+
+	override function beatHit(){
+		ziffy.animation.play('bop');
+	}
 
 	override function update(elapsed:Float)
 	{
@@ -208,7 +224,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.screenCenter(X);
+			spr.x = 50;
 		});
 	}
 	
